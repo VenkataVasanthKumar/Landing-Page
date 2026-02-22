@@ -1,0 +1,258 @@
+.hero {
+padding-bottom: 80px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Each background slide */
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 2s ease-in-out;
+}
+
+/* Active slide with fade + zoom */
+.hero-slide.active {
+  opacity: 1;
+  animation: zoomFade 7s ease-in-out forwards;
+}
+/* ===== HERO SECTION ===== */
+
+.hero-content {
+  padding-left: 200px;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 20px 25%;
+  color: white;
+}
+
+/* ===== HEADING ===== */
+
+.hero-content h1 {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+
+  
+}
+
+/* Gradient highlight (optional) */
+.hero-content h1 span {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ===== TEXT ===== */
+
+.hero-content p {
+  font-size: 18px;
+  
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* ===== BUTTONS ===== */
+
+.hero-buttons {
+
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+/* Primary Button */
+
+.btn-primary {
+  text-decoration: none;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 35px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 114, 255, 0.3);
+}
+
+/* Secondary Button */
+
+.btn-secondary {
+  text-decoration: none;
+  border: 2px solid #00e1ff;
+  color: #f8f8f8;
+  padding: 12px 30px;
+  border-radius: 35px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background: #0072ff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .hero{
+    padding-bottom: 80px;
+  }
+  
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero{
+    padding-bottom: 80px;
+  }
+  .hero-content {
+    text-align: center;
+    padding: 50px 6%;
+    margin: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero{
+    padding-bottom: 80px;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
+}
+
+/* Small Mobile 320px */
+@media (max-width: 360px) {
+  .hero{
+    padding-bottom: 80px;
+  }
+  .hero-content {
+    padding: 40px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+}
+
+/* Zoom in and out effect (Ken Burns) */
+@keyframes zoomFade {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Dark overlay */
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  top: 40%;
+  font-family: Arial, sans-serif;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 20px;
+}
+
+@media (max-width: 360px) {
+  .hero-content {
+    padding: 30px 4%;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes zoomFade {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

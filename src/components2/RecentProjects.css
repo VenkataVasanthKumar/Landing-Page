@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== SECTION ===== */
+.projects-section {
+  padding: 50px 15px; /* reduced */
+  background: #f5f7fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== TITLE ===== */
+.title {
+  font-size: 32px; /* reduced */
+  font-weight: 700;
+}
+
+.title span {
+  color: #4da3ff;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 40px;
+  padding: 8px 14px; /* reduced */
+  min-width: 250px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 40px;
+}
+
+/* Filter */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  padding: 6px 14px; /* reduced */
+  border-radius: 30px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.filter-btn.active {
+  background: linear-gradient(90deg, #4da3ff, #2dd4bf);
+  color: white;
+  border: none;
+}
+
+/* ===== GRID ===== */
+.projects-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* reduced */
+}
+
+/* ===== CARD ===== */
+.project-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.image-wrapper {
+  position: relative;
+  height: 160px; /* reduced */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Status */
+.status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Content */
+.card-content {
+  padding: 18px; /* reduced */
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* Tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+/* Footer */
+.card-footer {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ===== POPUP ===== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 15px;
+}
+
+.popup-content {
+  background: white;
+  padding: 18px;
+  border-radius: 15px;
+  width: 450px;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.popup-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ============================= */
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+/* ============================= */
+
+/* 💻 Laptop */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 📲 Tablet */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 📱 Small Mobile (320px) */
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 35px 10px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+
+  .popup-content {
+    padding: 12px;
+  }
+
+  .popup-img {
+    height: 150px;
+  }
+}

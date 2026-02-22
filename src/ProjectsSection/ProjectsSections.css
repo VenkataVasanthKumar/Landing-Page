@@ -1,0 +1,214 @@
+/* Section */
+.projects-section {
+  padding: 30px 8%;
+  background: #f5f7fa;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: #007bff;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* Card Design */
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+.project-image img {
+  width: 100%;
+  height: 220px; /* Reduced size */
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Content */
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.project-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Button */
+.more-btn {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  background: #0056b3;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup box */
+.modal-content {
+ 
+  background: #fff;
+  padding:20px;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 10px;
+  position: relative;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 50%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+}
+/* ===== Small Mobile (320px) ===== */
+@media (max-width: 360px) {
+
+  /* Section padding */
+  .projects-section {
+    padding: 40px 4%;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  /* Card */
+  .project-content {
+    padding: 12px;
+  }
+
+  .project-content h3 {
+    font-size: 16px;
+  }
+
+  .project-content p {
+    font-size: 13px;
+  }
+
+  /* Project Image in card */
+  .project-image img {
+    height: 160px;
+  }
+
+  /* ===== Modal Fix ===== */
+
+  .modal {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .modal-content {
+    margin-top: 100px;
+    width: 95%;
+    padding: 15px;
+    border-radius: 8px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-content h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .modal-content p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .close {
+    font-size: 20px;
+    right: 10px;
+    top: 6px;
+  }
+
+  /* ===== Gallery Layout (Left & Right) ===== */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Left & Right */
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 90px;   /* Reduced image size */
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}

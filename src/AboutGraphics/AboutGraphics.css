@@ -1,0 +1,151 @@
+/* ================= SECTION ================= */
+
+.agency-section {
+  background: #ffffff;
+  padding: 30px 8%;
+ 
+}
+
+.agency-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.agency-text {
+  flex: 1;
+}
+
+.sub-label {
+  color: #00a2ff;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.main-heading {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.main-heading span {
+  background: linear-gradient(90deg, #00f5ff, #00a2ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-paragraph {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 520px;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.benefits-grid {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Card Style */
+.benefit-card {
+  width: calc(50% - 15px);
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 162, 255, 0.15);
+}
+
+/* Icon Box */
+.icon-square {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  background: #f0f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00a2ff;
+  margin-bottom: 18px;
+  transition: 0.4s ease;
+}
+
+.benefit-card:hover .icon-square {
+  background: linear-gradient(90deg, #00f5ff, #00a2ff);
+  color: #ffffff;
+}
+
+/* Text */
+.benefit-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+  .agency-container {
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .benefits-grid {
+    width: 100%;
+  }
+
+  .benefit-card {
+    width: 100%;
+  }
+
+  .main-heading {
+    font-size: 38px;
+  }
+
+  .intro-paragraph {
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .agency-section {
+    padding: 70px 6%;
+  }
+
+  .main-heading {
+    font-size: 28px;
+  }
+
+  .intro-paragraph {
+    font-size: 14px;
+  }
+}
